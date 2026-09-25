@@ -10,22 +10,22 @@ const teammates = [
 
 export function ClientsAndTeam() {
   return (
-    <section className="company-story" aria-labelledby="company-story-title">
+    <div className="company-story" role="region" aria-labelledby="company-story-title">
       <div className="company-story__heading">
         <p className="company-story__eyebrow">A fictional company story</p>
         <h2 id="company-story-title">The people behind Persona Lab</h2>
       </div>
 
       <div className="company-story__grid">
-        <section className="company-story__group" aria-labelledby="clients-title">
+        <div className="company-story__group" role="group" aria-labelledby="clients-title">
           <h3 id="clients-title">Fictional clients</h3>
           <ul className="company-story__list">
             {clients.map((client) => <li key={client}>{client}</li>)}
           </ul>
           <p className="company-story__disclosure">Fictional customers. Wildly fictional results.</p>
-        </section>
+        </div>
 
-        <section className="company-story__group" aria-labelledby="team-title">
+        <div className="company-story__group" role="group" aria-labelledby="team-title">
           <h3 id="team-title">The team</h3>
           <ul className="company-story__list company-story__team">
             {teammates.map(({ name, role, character }) => (
@@ -36,8 +36,8 @@ export function ClientsAndTeam() {
               </li>
             ))}
           </ul>
-        </section>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
