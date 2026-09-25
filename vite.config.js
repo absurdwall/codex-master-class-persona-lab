@@ -1,0 +1,9 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+const configuredBase = process.env.VITE_BASE_PATH || "/";
+
+export default defineConfig({
+  base: configuredBase.endsWith("/") ? configuredBase : `${configuredBase}/`,
+  plugins: [react()],
+});
