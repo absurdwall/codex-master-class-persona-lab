@@ -221,3 +221,234 @@
     font-size: 11px;
   }
 }
+
+/* Mobile usability and accessibility refinements */
+.wordmark {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 4px;
+}
+
+.disclosure {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.btn,
+.sidebar button {
+  min-height: 44px;
+}
+
+.form-grid label,
+.wide-label {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.check {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  line-height: 1.4;
+}
+
+.check input {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  margin: 0;
+}
+
+.workspace-nav {
+  display: grid;
+  gap: 2px;
+}
+
+.workspace-nav > p {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin: 0 8px 12px;
+}
+
+.sidebar button {
+  padding: 10px 9px;
+}
+
+.finding.unsupported {
+  opacity: 1;
+  border-style: dashed;
+  border-color: #595953;
+  background: #f8f7f2;
+}
+
+.finding.unsupported h2,
+.finding.unsupported p,
+.finding.unsupported .status {
+  color: #42423d;
+}
+
+.finding.unsupported .status {
+  border-color: #42423d;
+}
+
+.compare-table {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid;
+}
+
+.compare-table > * {
+  padding: 0;
+  border: 0;
+}
+
+.compare-table table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 13px;
+  border-right: 1px solid #b9b8b2;
+  border-bottom: 1px solid #b9b8b2;
+  text-align: left;
+  vertical-align: top;
+}
+
+.compare-table tr > :last-child {
+  border-right: 0;
+}
+
+.compare-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.compare-table thead th {
+  background: #e9e8e2;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.compare-table tbody th {
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    min-height: 0;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    padding: 8px 16px 10px;
+  }
+
+  .topbar .disclosure {
+    display: block;
+    flex: 1 1 100%;
+    width: 100%;
+    margin-left: 0;
+    padding: 4px 0 4px 9px;
+    border: 0;
+    border-left: 2px solid #315fc4;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .sidebar {
+    display: block;
+    overflow: visible;
+    padding: 8px 12px;
+    border-right: 0;
+    border-bottom: 2px solid;
+  }
+
+  .workspace-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .workspace-nav > p {
+    display: none;
+  }
+
+  .sidebar button {
+    width: 100%;
+    padding: 10px 4px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .compare-table {
+    overflow: visible;
+    border: 0;
+  }
+
+  .compare-table table {
+    display: block;
+  }
+
+  .compare-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .compare-table tbody {
+    display: grid;
+    gap: 12px;
+  }
+
+  .compare-table tbody tr {
+    display: grid;
+    padding: 8px 14px;
+    border: 2px solid;
+    background: #fff;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 9px 0;
+    border: 0;
+  }
+
+  .compare-table tbody th {
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid #d0cfc9;
+  }
+
+  .compare-table tbody td {
+    display: grid;
+    grid-template-columns: minmax(5rem, 6rem) minmax(0, 1fr);
+    gap: 8px;
+    align-items: start;
+    border-bottom: 1px solid #d0cfc9;
+  }
+
+  .compare-table tbody td::before {
+    content: attr(data-label);
+    color: #55554f;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .compare-table tbody td:last-child {
+    border-bottom: 0;
+  }
+}
