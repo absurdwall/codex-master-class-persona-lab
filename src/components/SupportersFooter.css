@@ -1,0 +1,70 @@
+.persona-supporter-footer {
+  width: 100%;
+  border-top: 1px solid #d0cfc9;
+  color: #66655f;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.persona-supporters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 0;
+}
+
+.persona-supporters-copy h2 {
+  margin: 0;
+  color: #161616;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+}
+
+.persona-supporters-copy p {
+  margin: 3px 0 0;
+  font-size: 12px;
+}
+
+.persona-supporters-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.persona-supporters-list li {
+  padding: 7px 10px;
+  border: 1px solid #c7c6c0;
+  border-radius: 999px;
+  color: #353530;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.persona-company-info {
+  margin: 0;
+  padding: 11px 0 0;
+  border-top: 1px solid #d0cfc9;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .persona-supporters {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .persona-supporters-list {
+    justify-content: flex-start;
+  }
+
+  .persona-company-info {
+    font-size: 11px;
+  }
+}
