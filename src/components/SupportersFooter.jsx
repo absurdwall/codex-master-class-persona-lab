@@ -8,8 +8,8 @@ const fictionalSupporters = [
 
 export default function SupportersFooter() {
   return (
-    <footer className="persona-supporter-footer" aria-label="Persona Lab company information">
-      <section className="persona-supporters" aria-labelledby="persona-supporters-title">
+    <section className="persona-supporter-section" aria-labelledby="persona-supporters-title">
+      <div className="persona-supporters">
         <div className="persona-supporters-copy">
           <h2 id="persona-supporters-title">Fictional supporters</h2>
           <p>Workshop names only · no real endorsements or investment.</p>
@@ -19,13 +19,10 @@ export default function SupportersFooter() {
             <li key={supporter}>{supporter}</li>
           ))}
         </ul>
-      </section>
+      </div>
       <p className="persona-company-info">
         Persona Lab · Somewhere on the Internet · Built with synthetic personas and suspiciously confident hypotheses.
       </p>
-      <p className="persona-research-disclosure">
-        Fake data only · no model API · no browser automation · not human research
-      </p>
-    </footer>
+    </section>
   );
 }
